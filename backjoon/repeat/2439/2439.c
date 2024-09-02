@@ -2,21 +2,29 @@
 
 int	main(void)
 {
-	int	cnt;
+	int	num;
 	int	count;
+	int	c2;
+	int	c3;
 
-	scanf("%d", &cnt);
-	while (cnt > 0)
+	scanf("%d", &num);
+	c2 = num;
+	while (num > 0)
 	{
-		count = 0;
-		while (count < cnt)
+		c3 = num;
+		count = 1;
+		while (count < num)
 		{
 			printf(" ");
 			count++;
 		}
-		while(cnt - count < cnt)
+		while (0 <= c2 - c3)
+		{
 			printf("*");
-		cnt--;
+			c3++;
+		}
+		printf("\n");
+		num--;
 	}
 	return 0;
 }
